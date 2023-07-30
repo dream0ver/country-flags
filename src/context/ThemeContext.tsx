@@ -12,11 +12,11 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     setTheme(prev =>{
       if(prev == "light-theme"){
         document.body.classList.add("dark-theme")
-        document.body.classList.remove("light-theme")
+        return "dark-theme"
       }
       else{
-        document.body.classList.add("light-theme")
         document.body.classList.remove("dark-theme")
+        return "light-theme"
       }
     })
   }
