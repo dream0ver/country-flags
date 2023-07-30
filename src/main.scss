@@ -124,7 +124,7 @@ $color-white: hsl(0, 0%, 100%);
     flex: 1 1 50%;
     h1 {
       font-weight: 800;
-      font-size: 5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
   }
@@ -153,10 +153,28 @@ $color-white: hsl(0, 0%, 100%);
     background-color: $dark-blue;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 375px) {
+  .app-padding {
+    padding: 0rem 2rem;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .flag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100%);
+    gap: 3rem;
+  }
+  .flag-card {
+    width: 100%;
+    .img-container {
+      img {
+        width: 100%;
+      }
+    }
+  }
   .details-page {
     flex-direction: column;
-    gap: 2.5rem;
     .details-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
